@@ -1,0 +1,29 @@
+.item_simpson {
+    margin: 10px;
+    text-align: center;
+}
+
+.total_simpsons {
+    background: silver;
+    border: 2px solid cornflowerblue;
+}
+
+.product-card {
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+}
+.product-card img {
+    width: 200px;
+    height: 200px;
+}
+
+.product-total {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-total div {
+    width: 50%;
+    margin-top: 3px;
+}

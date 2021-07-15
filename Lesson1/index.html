@@ -5,9 +5,208 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
+    <title>Lesson1</title>
 </head>
 <body>
+<script>
 
+    let salut = 'hello';
+    let school = 'owu';
+    let site = 'com';
+    let country = 'ua';
+
+    console.log(salut);
+    console.log(school);
+    console.log(site);
+    console.log(country);
+    document.write('<h1>' + salut + '</h1>');
+    document.write(`<h2>${salut}, ${school}</h2>`);
+    document.write(`<h3>${salut}, ${school}.${site}.${country}</h3>`);
+
+    salut = 'good morning';
+    document.write(`<p>${salut}</p>`);
+    console.log(salut);
+
+    school = 'okten';
+    console.log(`${school}`);
+    document.write(`<p>${school}</p>`);
+
+    site = 'gmail';
+    country = 'es';
+    console.log(site);
+    console.log(country);
+    document.write('<h2>' + salut + ',' + ' ' + school + ' ' + site + '.' + country + '</h2>')
+
+    let num = 1;
+    console.log(num);
+    document.write(`<p>${num}</p>`);
+
+    let num2 = 10;
+    console.log(num2);
+    document.write(`<p>${num2}</p>`);
+
+    let num3 = -999;
+    console.log(num3);
+    document.write(`<p>${num3}</p>`);
+
+    let num4 = 123;
+    console.log(num4);
+    document.write(`<p>${num4}</p>`);
+
+    let num5 = 3.14;
+    console.log(num5);
+    document.write(`<p>${num5}</p>`);
+
+    let num6 = 2.7;
+    console.log(num6);
+    document.write(`<p>${num6}</p>`);
+
+    let num7 = 16;
+    console.log(num7);
+    document.write(`<p>${num7}</p>`);
+
+    document.write('<p>' + num + ',' + num2 + ',' + num3 + ',' + num4 + ',' + num5 + ',' + num6 + ',' + num7 + '</p>')
+
+    num = '2';
+    console.log(num);
+    document.write(`<p>${num}</p>`);
+
+    num2 = '20';
+    console.log(num2);
+    document.write(`<p>${num2}</p>`);
+
+
+    num3 = '-777';
+    console.log(num3);
+    document.write(`<p>${num3}</p>`);
+
+
+    num4 = '456';
+    console.log(num4);
+    document.write(`<p>${num4}</p>`);
+
+
+    num5 = '5.16';
+    console.log(num5);
+    document.write(`<p>${num5}</p>`);
+
+
+    num6 = '9.8';
+    console.log(num6);
+    document.write(`<p>${num6}</p>`);
+
+
+    num7 = '12';
+    console.log(num7);
+    document.write(`<p>${num7}</p>`);
+
+    document.write(`<h3>${num} + ${num2} + ${num3} + ${num4} + ${num5} + ${num6} + ${num7}</h3>`);
+
+    let trust = true;
+    trust = false;
+    console.log(trust);
+    trust = 8 > 12;
+    document.write(`<p>${trust}</p>`);
+
+    console.log(trust);
+    trust = 8 < 12;
+    document.write(`<p>${trust}</p>`);
+
+    let lie = false;
+    lie = true;
+    console.log(lie);
+
+    lie = '7' == 7;
+    console.log(lie);
+    document.write(`<p>${lie}</p>`);
+
+    lie = '7' === 7;
+    console.log(lie);
+    document.write(`<p>${lie}</p>`);
+
+    lie = 7 === 7;
+    console.log(lie);
+    document.write(`<p>${lie}</p>`);
+
+    let firstName = 'Anastasiia';
+    let middleName = 'Vasylivna';
+    let lastName = 'Skorodynska';
+    let person = [firstName, middleName, lastName];
+    console.log(person);
+    console.log(person[0]);
+
+    let user = prompt('enter your name');
+    if (user) {
+        console.log('nice');
+    } else {
+        console.log('sorry');
+    }
+
+
+    let user2 = prompt('enter your middlename');
+    if (user2) {
+        console.log('nice');
+    } else {
+        console.log('sorry');
+    }
+
+
+    let user3 = prompt('enter your age');
+    if (user3) {
+        console.log('nice');
+    } else {
+        console.log('sorry');
+    }
+    document.write(`Вітаю, ${user} ${user2}. Тобі ${user3} років.`);
+
+    let a = 100;
+    console.log(typeof a);
+
+    let b = '100';
+    console.log(typeof b);
+
+    let c = true;
+    console.log(typeof true);
+
+
+    console.log(5 < 6);
+    console.log(5 > 6);
+    console.log(5 >= 6);
+    console.log(5 === 6);
+
+    console.log(10 >= 10);
+    console.log(10 === 10);
+    console.log(10 > 10);
+    console.log(10 < 10);
+    console.log(10 !== 10);
+
+    console.log(123 === '123');
+    console.log(123 == '123');
+
+    //
+
+    console.log(132 > 100 && 45 < 12 ); //false
+    console.log(34 > 33 && 23 < 90 ); //true
+    console.log(99 > 100 && 45 > 12 ); //false
+    console.log(132 > 100 || 45 < 12 ); //true
+    console.log(111 > 11 || 45 < 111 ); //true
+    console.log((111 > 11 || 45 < 111) && (132 > 100 || 45 < 12) ); //true
+    console.log((111 > 11 || 45 < 56) || (132 > 100 || 45 < 12) ); //true
+    console.log((132 > 100 && 45 < 12 ) && (132 > 100 || 45 < 12 ) ); //false
+    console.log((111 > 11 || 45 < 111) || (99 > 100 && 45 > 12 )); //true
+    console.log(!!'-1'); //true
+    console.log(!!-1); //true
+    console.log(!!'0'); //true
+    console.log(!!'null'); //true
+    console.log(!!'undefined'); //true
+    console.log(!!(3/'owu')); //false
+    console.log((111 > 11 || 45 < 111) ||  !!'0'); //true
+    console.log((!!111 == !!11 || 45 < 111) && (99 > 100 && 45 > 12 )); //false
+
+
+
+
+
+</script>
 </body>
 </html>
