@@ -56,7 +56,6 @@ function num(a, b, c, d) {
         return(d);
 
 }
-
 num(102, 4, 35, 73)
 // ????????????????????????
 
@@ -96,18 +95,12 @@ num(102, 4, 35, 73)
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
-    let mix = [12, 44, `anna`, `smith`, true, false];
-    mixed(mix);
-
-    function mixed(item) {
-        document.write(`<ul>
-<li>${item[0]}</li>
-<li>${item[1]}</li>
-<li>${item[2]}</li>
-<li>${item[3]}</li>
-<li>${item[4]}</li>
-<li>${item[5]}</li>
-</ul>`)
+let mix = [12, 44, `anna`, `smith`, true, false];
+mixed(mix);
+function mixed(newNameForYourArray) {
+    document.write('<ul>');
+    for (let element of newNameForYourArray) {
+        document.write(`<li>${element}</li>`);
     }
-
-
+    document.write('</ul>');
+}
