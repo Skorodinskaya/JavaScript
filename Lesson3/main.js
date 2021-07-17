@@ -31,10 +31,10 @@ console.log(squareCylinder);
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 let array = [102, 4, 35, 73, 456, 444, 33, 34];
-roll(array)
+const min = roll(array);
 function roll(newArray) {
-let min = 0;
-let max = 0;
+let min = array[0];
+let max = array[0];
 
 for (let number of newArray) {
     if (number < min) {
@@ -47,11 +47,8 @@ for (let number of newArray) {
 console.log("Виводить найбільше: ", max);
 return min;
 }
-const min = ;
-// ??????
 console.log("Повертає найменьше: ", min);
 
-// ????????????????????????
 
 // - створити функцію яка при створює блок з текстом. Текст задати через аргумент
 
