@@ -30,33 +30,27 @@ let squareCylinder = cylinder(50, 125);
 console.log(squareCylinder);
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+let array = [102, 4, 35, 73, 456, 444, 33, 34];
+roll(array)
+function roll(newArray) {
+let min = 0;
+let max = 0;
 
-function num(a, b, c, d) {
-    if (a > b && a > c && a>d) {
-        console.log(a);
+for (let number of newArray) {
+    if (number < min) {
+       min = number;
     }
-    if (b > a && b > c && b > d) {
-        console.log(b);
+    if (number > max) {
+       max = number;
     }
-    if (c > a && c > b && c > d) {
-        console.log(c);
-    }
-    if (d > a && d > b && d > c)
-        console.log(d);
-    if (a < b && a < c && a < d) {
-        return(a);
-    }
-    if (b < a && b < c && b < d) {
-        return (b);
-    }
-    if (c < a && c < b && c < d) {
-        return(c);
-    }
-    if (d < a && d < b && d < c)
-        return(d);
-
 }
-num(102, 4, 35, 73)
+console.log("Виводить найбільше: ", max);
+return min;
+}
+const min = ;
+// ??????
+console.log("Повертає найменьше: ", min);
+
 // ????????????????????????
 
 // - створити функцію яка при створює блок з текстом. Текст задати через аргумент
