@@ -31,21 +31,14 @@ console.log(squareCylinder);
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 
-// let numbers = [23, 1, 97, 68, 33];
-// function minElement (numbers) {
-//     let min;
-//     let max = numbers[0];
-//     for(let i =0; i < numbers.length; i++) {
-//         if((numbers[i]) < max){
-//             max = numbers [i];
-//         } else {
-//             min = numbers [i];
-//         }
-//     }
-//     return min;
-// }
-// console.log(minElement(numbers));
-
+let numbers = [23, 1, 97, 68, 33];
+function someNum (numbers) {
+    let min = max;
+    let max = 0;
+    for(let i =0; i < numbers.length; i++) {
+        if(numbers > 1) {
+        }
+    }
 // ????????????????????????
 
 // - створити функцію яка при створює блок з текстом. Текст задати через аргумент
@@ -53,12 +46,13 @@ console.log(squareCylinder);
 function text(content) {
     document.write(`<div><p>${content}</p></div>`);
 }
-text (`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque blanditiis ex id ipsa omnis, possimus quaerat
+
+text(`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque blanditiis ex id ipsa omnis, possimus quaerat
     quod tempore voluptates`)
 
 // - створити функцію яка при створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
-function list (listContent) {
+function list(listContent) {
     document.write(`<ul>
 <li>${listContent}</li>
 <li>${listContent}</li>
@@ -66,8 +60,33 @@ function list (listContent) {
 </ul>`);
 
 }
-list (`happines`);
+list(`happines`);
 
 // - створити функцію яка при створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 
-function
+function roster(rosterContent, a) {
+    for (let i = 0; i < a; i++)
+        document.write(`<ul>
+<li>${rosterContent}</li>
+ </ul>`);
+}
+roster('sweet', 3)
+
+
+
+// - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+
+let mix = [12, 44, `anna`, `smith`, true, false];
+mixed(mix);
+function mixed (item) {
+        document.write(`<ul>
+<li>${item[0]}</li>
+<li>${item[1]}</li>
+<li>${item[2]}</li>
+<li>${item[3]}</li>
+<li>${item[4]}</li>
+<li>${item[5]}</li>
+</ul>`)
+}
+
+
