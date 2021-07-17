@@ -31,54 +31,75 @@ console.log(squareCylinder);
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 
-let numbers = [23, 1, 97, 68, 33];
-function someNum (numbers) {
-    let min = max;
-    let max = 0;
-    for(let i =0; i < numbers.length; i++) {
-        if(numbers > 1) {
-        }
-    }}
+function num(a, b, c, d) {
+    if (a > b && a > c && a>d) {
+        console.log(a);
+    }
+    if (b > a && b > c && b > d) {
+        console.log(b);
+    }
+    if (c > a && c > b && c > d) {
+        console.log(c);
+    }
+    if (d > a && d > b && d > c)
+        console.log(d);
+    if (a < b && a < c && a < d) {
+        return(a);
+    }
+    if (b < a && b < c && b < d) {
+        return (b);
+    }
+    if (c < a && c < b && c < d) {
+        return(c);
+    }
+    if (d < a && d < b && d < c)
+        return(d);
+
+}
+
+num(102, 4, 35, 73)
 // ????????????????????????
 
 // - створити функцію яка при створює блок з текстом. Текст задати через аргумент
 
-function text(content) {
-    document.write(`<div><p>${content}</p></div>`);
-}
+    function text(content) {
+        document.write(`<div><p>${content}</p></div>`);
+    }
 
-text(`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque blanditiis ex id ipsa omnis, possimus quaerat
+    text(`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque blanditiis ex id ipsa omnis, possimus quaerat
     quod tempore voluptates`)
 
 // - створити функцію яка при створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
-function list(listContent) {
-    document.write(`<ul>
+    function list(listContent) {
+        document.write(`<ul>
 <li>${listContent}</li>
 <li>${listContent}</li>
 <li>${listContent}</li>
 </ul>`);
 
-}
-list(`happines`);
+    }
+
+    list(`happines`);
 
 // - створити функцію яка при створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 
-function roster(rosterContent, a) {
-    for (let i = 0; i < a; i++)
-        document.write(`<ul>
+    function roster(rosterContent, a) {
+        for (let i = 0; i < a; i++)
+            document.write(`<ul>
 <li>${rosterContent}</li>
  </ul>`);
-}
-roster('sweet', 3)
+    }
 
+    roster('sweet', 3)
 
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
-let mix = [12, 44, `anna`, `smith`, true, false];
-mixed(mix);
-function mixed (item) {
+    let mix = [12, 44, `anna`, `smith`, true, false];
+    mixed(mix);
+
+    function mixed(item) {
         document.write(`<ul>
 <li>${item[0]}</li>
 <li>${item[1]}</li>
@@ -87,6 +108,6 @@ function mixed (item) {
 <li>${item[4]}</li>
 <li>${item[5]}</li>
 </ul>`)
-}
+    }
 
 
