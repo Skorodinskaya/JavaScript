@@ -32,32 +32,23 @@ console.log(squareCylinder);
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 
 function num(a, b, c, d) {
-    if (a > b && a > c && a>d) {
-        console.log(a);
-    }
-    if (b > a && b > c && b > d) {
-        console.log(b);
-    }
-    if (c > a && c > b && c > d) {
-        console.log(c);
-    }
-    if (d > a && d > b && d > c)
-        console.log(d);
-    if (a < b && a < c && a < d) {
-        return(a);
-    }
-    if (b < a && b < c && b < d) {
-        return (b);
-    }
-    if (c < a && c < b && c < d) {
-        return(c);
-    }
-    if (d < a && d < b && d < c)
-        return(d);
+    let min = arguments[0];
+    let max = arguments[0];
 
+    for (let argument of arguments) {
+        if (argument < min) {
+            min = argument;
+        }
+        if (argument > max) {
+            max = argument;
+        }
+    }
+    console.log("Виводить найбільше: ", max);
+    return min;
 }
+const min = num(102, 4, 35, 73, 456, 444, 33, 34);
+console.log("Повертає найменьше: ", min);
 
-num(102, 4, 35, 73)
 // ????????????????????????
 
 // - створити функцію яка при створює блок з текстом. Текст задати через аргумент
@@ -99,15 +90,12 @@ num(102, 4, 35, 73)
     let mix = [12, 44, `anna`, `smith`, true, false];
     mixed(mix);
 
-    function mixed(item) {
-        document.write(`<ul>
-<li>${item[0]}</li>
-<li>${item[1]}</li>
-<li>${item[2]}</li>
-<li>${item[3]}</li>
-<li>${item[4]}</li>
-<li>${item[5]}</li>
-</ul>`)
+    function mixed(newNameForYourArray) {
+        document.write('<ul>');
+        for (let element of newNameForYourArray) {
+            document.write(`<li>${element}</li>`);
+        }
+        document.write('</ul>');
     }
 
 
