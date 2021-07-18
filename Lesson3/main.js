@@ -31,8 +31,8 @@ console.log(squareCylinder);
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 let array = [102, 4, 35, 73, 456, 444, 33, 34];
-const min = roll(array);
-function roll(newArray) {
+const min = notitia (array);
+function notitia (newArray) {
 let min = array[0];
 let max = array[0];
 
