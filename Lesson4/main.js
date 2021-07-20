@@ -1,17 +1,25 @@
 // - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
+const array0 = []
 
+function random0(num) {
+    for (let i = 0; i < 30; i++) {
+        array0.push(Math.floor(Math.random() * num));
+    }
+}
 
+random0(101);
+console.log(array0);
 // - Змінти попередню функцію, щоб діапазон можна було визначити через аргументи.
 
 const array = []
 
-function random(num) {
+function random(min, max) {
     for (let i = 0; i < 30; i++) {
-        array.push(Math.floor(Math.random() * num));
+        array.push(Math.floor(Math.random() * (max-min) + min));
     }
 }
 
-random(101);
+random(10, 150);
 console.log(array);
 
 // створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
@@ -82,8 +90,5 @@ let user_filter = users.filter(function (user_number)
 )
 console.log(user_filter);
 
-let user_sort = user_filter.sort(function (a, b) {
-    return b - a;
-    }
-);
+let user_sort = user_filter.sort((a, b) => b.id - a.id);
 console.log(user_sort);
