@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cupiditate deleniti
+    molestias mollitia pariatur porro saepe! Dolorem eaque earum eligendi, iste maxime molestias quam vitae.
+    Dolore hic in quae sed.
+</p>
+
+<div id="rules" class="fc bp">
+    Первое правило Бойцовского клуба: никому не рассказывать о Бойцовском клубе. Второе правило Бойцовского
+    клуба: никогда никому не рассказывать о Бойцовском клубе. Третье правило Бойцовского клуба: в схватке
+    участвуют только двое. Четвертое правило Бойцовского клуба: не более одного поединка за один раз
+</div>
+
+<ul>
+    <li class="fc_rules rule1">Первое правило Бойцовского клуба: никому не рассказывать о Бойцовском клубе.</li>
+    <li class="fc_rules rule2">Второе правило Бойцовского
+        клуба: никогда никому не рассказывать о Бойцовском клубе
+    </li>
+    <li class="fc_rules rule3">Третье правило Бойцовского клуба: в схватке
+        участвуют только двое.
+    </li>
+    <li class="fc_rules rule4">Четвертое правило Бойцовского клуба: не более одного поединка за один раз</li>
+</ul>
+
+<script>
+    // - Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :
+    // -- отримує текст з параграфа з id "content"
+    let paragraph = document.getElementById('content');
+    console.log(paragraph);
+    // -- отримує текст з блоку з id "rules"
+    let rules = document.getElementById('rules');
+    console.log(rules);
+    // -- замініть текст параграфа з id 'content' на будь-який інший
+    paragraph.innerText = 'Blackpink (Korean: 블랙핑크; commonly stylized as BLACKPINK or BLΛƆKPIИK) is a South Korean girl group formed by YG Entertainment, consisting of members Jisoo, Jennie, Rosé, and Lisa. The group debuted in August 2016 with their single album Square One, which featured "Whistle" and "Boombayah", their first number-one entries on South Korea\'s Gaon Digital Chart and the Billboard World Digital Song Sales chart, respectively.'
+    console.log(paragraph);
+    // -- замініть текст параграфа з id 'rules' на будь-який інший
+    rules.innerText = 'BTS (Korean: 방탄소년단; RR: Bangtan Sonyeondan), also known as the Bangtan Boys, is a seven-member South Korean boy band that began formation in 2010 and debuted in 2013 under Big Hit Entertainment.[4] The septet—composed of Jin, Suga, J-Hope, RM, Jimin, V, and Jungkook—co-writes and co-produces much of their own output.'
+    console.log(rules);
+    // -- змініть кожному елементу колір фону на червоний
+  let total = document.body.getElementsByTagName('div');
+    for (const totalElement of total) {
+        totalElement.style.background = 'red'
+    }
+  let total1 = document.body.getElementsByTagName('p');
+    for (const totalElement of total1) {
+        totalElement.style.background = 'red'
+    }
+  let total2 = document.body.getElementsByTagName('ul');
+    for (const totalElement of total2) {
+        totalElement.style.background = 'red'
+    }
+
+// #2// document.body.style.background = 'red'
+
+    // -- змініть кожному елементу колір тексту на синій
+// let blue = document.getElementsByTagName('p', 'div', 'ul');
+//     for (const blueElement of blue) {
+//         blueElement.style.color = 'blue'
+//     }
+// let blue2 = document.getElementsByTagName('div');
+//     for (const blueElement of blue2) {
+//         blueElement.style.color = 'blue'
+//     }
+// let blue3 = document.getElementsByTagName('ul');
+//     for (const blueElement of blue3) {
+//         blueElement.style.color = 'blue'
+//     }
+  document.body.style.color = 'blue'
+
+
+    // -- отримати весь список класів елемента з id=rules і вивести їх в console.log
+  // let rulesChildren = rules.children;
+  //   console.log(rulesChildren);
+  //
+    // -- отримати всі елементи з класом fc_rules. визначити їм 2 події "клік", одна вивдоить текст елементу, інша довільний ьексь
+ let bodyChildren = document.body.children;
+    console.log(bodyChildren);
+    for (const bodyChild of bodyChildren) {
+        if (bodyChild.classList.contains('fc_rules')) {
+            console.log(bodyChild);
+        }
+    };
+
+    // -- поміняти колір тексту у всіх елементів fc_rules на жовтий
+    let fcRules = document.getElementsByClassName('fc_rules');
+    for (const fcRule of fcRules) {
+        fcRule.style.color = 'yellow'
+    }
+
+</script>
+</body>
+</html>
