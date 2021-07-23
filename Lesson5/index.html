@@ -78,17 +78,17 @@
 
 
     // -- отримати весь список класів елемента з id=rules і вивести їх в console.log
-  // let rulesChildren = rules.children;
-  //   console.log(rulesChildren);
-  //
+    console.log(rules.classList);
     // -- отримати всі елементи з класом fc_rules. визначити їм 2 події "клік", одна вивдоить текст елементу, інша довільний ьексь
- let bodyChildren = document.body.children;
-    console.log(bodyChildren);
-    for (const bodyChild of bodyChildren) {
-        if (bodyChild.classList.contains('fc_rules')) {
-            console.log(bodyChild);
-        }
+
+    let fcRulesElements = document.getElementsByClassName('fc_rules');
+    for (const fcRulesElement of fcRulesElements) {
+        fcRulesElement.addEventListener ('click', function () {console.log(fcRulesElement.innerText)})
+        fcRulesElement.addEventListener ('click', function () {console.log(`blackpink`)})
+
     }
+
+
 
     // -- поміняти колір тексту у всіх елементів fc_rules на жовтий
     let fcRules = document.getElementsByClassName('fc_rules');
