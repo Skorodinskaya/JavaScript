@@ -1,0 +1,14 @@
+.product-card {
+    text-align: center;
+}
+
+.product-title {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #11996a;
+}
+
+.product-card img{
+    width: 300px;
+    height: 300px;
+}
