@@ -1,0 +1,21 @@
+.total {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.total div {
+    width: 50%;
+    margin-top: 3px;
+}
+
+.name {
+    background: #54c5ff;
+}
+
+.email {
+    text-decoration: underline;
+}
+
+.address {
+   font-style: italic;
+}
