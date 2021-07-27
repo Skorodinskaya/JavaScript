@@ -4,20 +4,22 @@
 //     [2,3,4,5]
 // результат
 //     [3,5,7,9]
-    let array = [];
-    function index (a, b) {
-        for (i=0; i<a.length; i++) {
-            array.push(a[i]+b[i])
-        }
-        return array
+let array = [];
+
+function index(a, b) {
+    for (i = 0; i < a.length; i++) {
+        array.push(a[i] + b[i])
     }
-let returnArray = index([1,2,3,4], [2,3,4,5]);
+    return array
+}
+
+let returnArray = index([1, 2, 3, 4], [2, 3, 4, 5]);
 console.log(returnArray);
 
 // - Дан масив ['a', 'b', 'c']. Додайте йому в кінець елементи 1, 2, 3 за допомогою циклу.
 let abc = ['a', 'b', 'c'];
-for (i=1; i<=3; i++) {
-  abc.push(i)
+for (i = 1; i <= 3; i++) {
+    abc.push(i)
 }
 console.log(abc);
 // - Дан масив [1, 2, 3]. Зробіть з нього новий масив [3, 2, 1].
@@ -36,15 +38,15 @@ console.log(mass1);
 
 // - Дан масив [1, 2, 3, 4, 5]. Перетворіть масив в [4, 5].
 let mass2 = [1, 2, 3, 4, 5]
-let mass2Item = mass2.slice(3,6);
+let mass2Item = mass2.slice(3, 6);
 console.log(mass2Item);
 
 // - Дан масив [1, 2, 3, 4, 5]. Перетворіть масив в [1,2].
-let mass3Item = mass2.slice(0,2)
+let mass3Item = mass2.slice(0, 2)
 console.log(mass3Item);
 
 // - Дан масив [1, 2, 3, 4, 5]. Зробіть з нього масив [1, 2, 3, 'a', 'b', 'c'].
-let mass4Item = mass2.slice(0,3)
+let mass4Item = mass2.slice(0, 3)
 console.log(mass4Item);
 let mass5Item = mass4Item.push('a', 'b', 'c')
 console.log(mass4Item, mass5Item);
@@ -52,7 +54,7 @@ console.log(mass4Item, mass5Item);
 // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
 let even = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for (const number of even) {
-    if (!(number %2)) {
+    if (!(number % 2)) {
         console.log(number);
     }
 }
@@ -65,16 +67,16 @@ for (const number of even) {
 
 let mass6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 let mass7 = [];
-for (i =0; i<mass6.length; i++) {
+for (i = 0; i < mass6.length; i++) {
     mass7.push(mass6[i])
 }
 console.log(mass7);
 
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
-let mass8 = [ 'a', 'b', 'c'];
+let mass8 = ['a', 'b', 'c'];
 let mass9 = [];
-for (i=0; i<mass8.length; i++) {
-    mass9= mass9+mass8[i]
+for (i = 0; i < mass8.length; i++) {
+    mass9 = mass9 + mass8[i]
 }
 console.log(mass9);
 
@@ -87,8 +89,8 @@ console.log(mass9);
 
 let mass10 = ['a', 'b', 'c'];
 let mass11 = [];
-i=0;
-while (i<mass10.length) {
+i = 0;
+while (i < mass10.length) {
     mass11 = mass11 + mass10[i]
     i++
 }
@@ -107,10 +109,15 @@ console.log(mass13);
 //   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
-let mass14 = [9,8,0,4];
-let fun = massFun(mass14);
-function massFun (fun) {
-    for (i=0; i<mass14.length; i++) {
+let mass14 = [9, 8, 0, 4];
 
-    }
-    }
+console.log(mass14)
+massFun(mass14, 2);
+console.log(mass14)
+
+function massFun(arr, num) {
+    let bufer = arr[num + 1]
+    arr[num + 1] = arr[num]
+    arr[num] = bufer
+}
+

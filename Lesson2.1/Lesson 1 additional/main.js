@@ -52,11 +52,13 @@ for (let i = list.length; i >= 0;  i--) {
     console.log(list[i]);
 }
 // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
-// for (let i >= 0; i = list.length; i--) {
-//     if (!(list[i]%2)) {
-//         console.log(list[i]);
-//     }
-// }
+for (let i = list.length -1; i >= 0; i--) {
+    if (!(list[i]%2)) {
+        console.log('___________________')
+        console.log(list[i]);
+        console.log('___________________')
+    }
+}
 
 // 10
 // створити пустий масив та :
