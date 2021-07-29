@@ -48,3 +48,25 @@ takeAShower()
     })
 
 
+function gatherOutfit() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (wakeUp(reject)) {
+                reject();
+            } else {
+                resolve()
+            }
+        }, 400)
+    })
+}
+
+gatherOutfit()
+    .then((value) => {
+        console.log('Choose great outfit for today')
+    })
+    .catch(reason => {
+        console.log('Put on t-shirt and shorts')
+
+    })
+
+
