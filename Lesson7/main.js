@@ -1,72 +1,66 @@
 function wakeUp(time) {
+    console.log('Morning')
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (time > 8) {
-                reject();
+                reject('I woke up');
             } else {
-                resolve()
+                resolve('I overslept')
             }
         }, 1000)
     })
 }
 
-function haveBreakfast () {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve();
-        }, 500)
-    })
-}
-
-wakeUp(7)
+wakeUp(4)
     .then((value) => {
-console.log('Breakfast is ready. Enjoy your meal.')
-    })
-.catch(reason => {
-    console.log('You stay without meal')
-})
-
-function takeAShower() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (wakeUp(reject)) {
-                reject();
-            } else {
-                resolve()
-            }
-        }, 2000)
-    })
-}
-
-takeAShower()
-    .then((value) => {
-        console.log('Take a bath and relax')
+        console.log('Have breakfast')
     })
     .catch(reason => {
-        console.log('You do not have time to take a shower')
-
+        console.log('You stay without meal')
     })
-
-
-function gatherOutfit() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (wakeUp(reject)) {
-                reject();
-            } else {
-                resolve()
-            }
-        }, 400)
-    })
-}
-
-gatherOutfit()
     .then((value) => {
-        console.log('Choose great outfit for today')
+        function takeAShower() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (null) {
+                        reject();
+                    } else {
+                        resolve(wakeUp)
+                    }
+                }, 500)
+            })
+        }
+
+        takeAShower()
+            .then(value => {
+                console.log('Shower')
+            })
+
+            .catch(reason => {
+                console.log('None shower')
+            })
     })
-    .catch(reason => {
-        console.log('Put on t-shirt and shorts')
+    .then((value) => {
+        function gatherOutfit () {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (null) {
+                        reject();
+                    } else {
+                        resolve () }
+                    }, 1200)
+            })
+        }
+        gatherOutfit ()
+            .then((value) => {
+                console.log('Choose classy outfit')
+            })
+            .catch(reason => {
+                console.log('Put yesterdays clothes')
+            })
 
+            .then ((value) => {
+
+                }
+            )
     })
-
-
