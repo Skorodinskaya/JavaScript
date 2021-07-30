@@ -11,7 +11,7 @@ function wakeUp(time) {
     })
 }
 
-wakeUp(4)
+wakeUp(9)
     .then((value) => {
         console.log('Have breakfast')
     })
@@ -22,10 +22,10 @@ wakeUp(4)
         function takeAShower() {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    if (null) {
+                    if (wakeUp.reject) {
                         reject();
                     } else {
-                        resolve(wakeUp)
+                        resolve()
                     }
                 }, 500)
             })
@@ -44,7 +44,7 @@ wakeUp(4)
         function gatherOutfit () {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    if (null) {
+                    if (wakeUp.reject) {
                         reject();
                     } else {
                         resolve () }
