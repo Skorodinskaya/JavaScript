@@ -134,7 +134,10 @@ async function routine () {
         console.warn(reason)
         console.error('Bad day')
 
-        console.log(await gatherOutfit('bad'))
+    try {console.log(await gatherOutfit('bad'))
+        } catch (reason) {
+        console.warn(reason)
+    }
 
     }
 }
