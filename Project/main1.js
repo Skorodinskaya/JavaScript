@@ -4,14 +4,14 @@ fetch('https://jsonplaceholder.typicode.com/users')
         let usersBox = document.getElementsByClassName('users-box') [0]
         for (const user of value) {
             let userSelf = document.createElement('p');
-            let userButton = document.createElement('a')
+            let userLink = document.createElement('a')
             userSelf.innerText = `${user.id}. ${user.name}`
-            userButton.href = `user-details.html?userhref=${JSON.stringify(user)}`
+            userLink.href = `user-details.html?userhref=${JSON.stringify(user)}`
 
 
-            userButton.innerText = 'info';
+            userLink.innerText = 'info';
             usersBox.append(userSelf)
-            userSelf.append(userButton)
+            userSelf.append(userLink)
         }
     })
 // let buttonElement = document.createElement('button');
