@@ -8,17 +8,17 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="post-box"></div>
+    <ul class="post-box"></ul>
     <script>
         const JSONUSer = new URL(location).searchParams.get('userhref');
         const  user = JSON.parse(JSONUSer);
-        document.body.innerText = JSON.stringify(user, null, 2);
-        for (const userElement of user) {
-            for (const postButton of userElement) {
+        let userElement = document.createElement('div');
+
+        userElement.innerText = JSON.stringify(user, null, 2);
                 let buttonElement = document.createElement('button');
                 buttonElement.innerHTML = 'post of current user'
                 buttonElement.onclick = function () {
-                    fetch(`https://jsonplaceholder.typicode.com/users/${userElement.id}/posts`)
+                    fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
                         .then(value => value.json())
                         .then(value => {
                             let postBox = document.getElementsByClassName('post-box')[0];
@@ -26,18 +26,13 @@
                             for (const post of value) {
                                 let liPost = document.createElement('li');
                                 liPost.innerText = post.title
-                                postBox.append(liPost)
+                                postBox.appendChild(liPost)
 
                             }
-
-                            buttonElement.append(postBox)
                         })
-                }
-                user.append(buttonElement)
-
-            }
         }
-
+        userElement.appendChild(buttonElement)
+        document.body.appendChild(userElement)
 
     </script>
 </body>
