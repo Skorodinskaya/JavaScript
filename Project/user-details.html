@@ -25,7 +25,11 @@
                 for (const post of value) {
                     let liPost = document.createElement('li');
                     liPost.innerText = post.title
-                    postBox.appendChild(liPost)
+                    postBox.appendChild(liPost);
+                    let linkPostDetails = document.createElement('a');
+                    linkPostDetails.href = `post-details.html?postDetailshref=${JSON.stringify(post)}`
+                    linkPostDetails.innerText = 'Post details';
+                    postBox.appendChild(linkPostDetails)
 
                 }
 
