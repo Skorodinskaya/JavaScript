@@ -1,0 +1,24 @@
+div {
+padding-left: 600px;
+    background: #54c5ff;
+}
+button {
+    display: block;
+    width: 90%;
+}
+
+.post-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center
+}
+
+li {
+    width: 25%;
+
+}
+
+.post-box a {
+    padding-right: 140px;
+}

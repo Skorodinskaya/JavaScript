@@ -1,0 +1,17 @@
+.postStyle {
+    order: 1;
+}
+
+.comments-box {
+    order: 2;
+}
+
+.comments-box {
+    display: flex;
+    background: #54c5ff;
+}
+
+.comments-box li {
+    padding-right: 100px;
+
+}
