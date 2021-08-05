@@ -1,24 +1,29 @@
-div {
-padding-left: 600px;
-    background: #54c5ff;
+.userInfo {
+    width: 300px;
+    background: #bee5f6;
+   margin-right: 30px;
 }
-button {
-    display: block;
-    width: 90%;
+.userInfoTotal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+button {
+  margin: 20px 0 0 40px;
+    width: 90%;
+    background: #cea6ff;
+}
 .post-box {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center
+}
+.wrapper {
+    width: 19%;
+    margin: 5px;
+    background: #a6e5a1;
 }
 
-li {
-    width: 25%;
-
-}
-
-.post-box a {
-    padding-right: 140px;
+.wrapper a, p {
+    padding-left: 100px;
 }

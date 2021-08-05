@@ -5,20 +5,32 @@
 .users-box {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 10px;
 }
 
-.users-box p {
+.total {
     width: 49%;
-    margin: 5px;
-    text-align: center;
-    border: solid 2px black;
-    padding: 5px;
     background: #bee5f6;
+    margin: 10px 10px 10px 0;
+    border: 2px solid purple;
+    text-align: center;
     font-weight: bold;
 }
 
-.users-box a{
-    display: block;
-    text-align: center;
+.total button {
+    margin-bottom: 5px;
+    background: #cea6ff;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header h1 {
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

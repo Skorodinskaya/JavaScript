@@ -9,12 +9,20 @@
     <link rel="stylesheet" href="user-details.css">
 </head>
 <body>
-<ul class="post-box"></ul>
+<div class="post-box"></div>
 <script>
     const JSONUSer = new URL(location).searchParams.get('userhref');
     const user = JSON.parse(JSONUSer);
     let userElement = document.createElement('div');
-    userElement.innerText = JSON.stringify(user, null, 2)
+    let userInfoTotal = document.createElement('div');
+    userInfoTotal.className  = 'userInfoTotal'
+    let userInfo = document.createElement('div');
+    userElement.className = 'total';
+    userInfo.className = 'userInfo';
+
+    // userElement.innerHTML = `${user.id}. ${user.name} <br/>  ${user.username}`
+    userInfo.innerText = JSON.stringify(user, null, 2)
+
     let buttonElement = document.createElement('button');
     buttonElement.innerHTML = 'post of current user'
     buttonElement.onclick = function () {
@@ -24,21 +32,25 @@
                 let postBox = document.getElementsByClassName('post-box')[0];
                 postBox.innerHTML = ''
                 for (const post of value) {
-                    let liPost = document.createElement('li');
+                    let wrapper = document.createElement('div');
+                    wrapper.className = 'wrapper';
+                    let liPost = document.createElement('p');
                     liPost.innerText = post.title
-                    postBox.appendChild(liPost);
                     let linkPostDetails = document.createElement('a');
                     linkPostDetails.href = `post-details.html?postDetailshref=${JSON.stringify(post)}`
                     linkPostDetails.innerText = 'Post details';
-                    postBox.appendChild(linkPostDetails)
+                    wrapper.append(liPost,linkPostDetails)
+                    postBox.appendChild(wrapper);
 
                 }
 
             })
     }
-    userElement.appendChild(buttonElement)
+    userElement.append(userInfoTotal, buttonElement)
     document.body.appendChild(userElement)
+    userInfoTotal. appendChild(userInfo)
 
 </script>
 </body>
 </html>
+

@@ -1,17 +1,14 @@
-.postStyle {
-    order: 1;
-}
-
-.comments-box {
-    order: 2;
-}
-
 .comments-box {
     display: flex;
+    flex-wrap: wrap;
     background: #54c5ff;
 }
-
 .comments-box li {
-    padding-right: 100px;
+width: 24%;
+margin-left: 12px;
+}
 
+.postStyle {
+    background: #cea6ff;
+    padding-left: 210px;
 }
