@@ -22,8 +22,18 @@ button {
     width: 19%;
     margin: 5px;
     background: #a6e5a1;
+    display: flex;
+    flex-wrap: wrap;
 }
-
 .wrapper a, p {
-    padding-left: 100px;
+    width: 100%;
+    text-align: center;
+
 }
+/*.wrapper p {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.wrapper a {*/
+/*    padding-left: 100px;*/
+/*}*/
